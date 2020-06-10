@@ -18,7 +18,7 @@ public class CourseController{
     public CourseController( CourseService courseService ){
         this.courseService = courseService;
     }
-
+      //This is a sample commit
     @PostMapping( value = {"/profesor/cursos"} )
     public ResponseEntity<Void> createCourse( @RequestBody CoursePOJO coursePojo ){
         Course course = courseService.mapperCourseEntity( coursePojo );
