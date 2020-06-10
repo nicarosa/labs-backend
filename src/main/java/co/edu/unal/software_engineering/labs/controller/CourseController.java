@@ -10,15 +10,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 
-@RestController
-public class CourseController{
-
-    private CourseService courseService;
-
-    public CourseController( CourseService courseService ){
-        this.courseService = courseService;
-    }
-
     @PostMapping( value = {"/profesor/cursos"} )
     public ResponseEntity<Void> createCourse( @RequestBody CoursePOJO coursePojo ){
         Course course = courseService.mapperCourseEntity( coursePojo );
